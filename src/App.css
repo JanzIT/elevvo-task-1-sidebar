@@ -33,8 +33,6 @@ body {
   width: 60px;
 }
 
-/* Button and Logo container */
-/* Needs refining for next commit */
 .logo-button-container {
   display: flex;
   align-items: center;
@@ -42,15 +40,26 @@ body {
   padding: 20px;
   border-bottom: 1px solid var(--sidebar-border);
   min-height: 80px;
-  flex-shrink: 0; /* Não deixa encolher */
+  flex-shrink: 0; 
 }
 
-/* Logo */
-/* Needs refining for next commit */
+.sidebar.closed .logo-button-container {
+  flex-direction: column;
+}
+
 .logo-placeholder {
   transition: opacity var(--transition);
   white-space: nowrap;
   overflow: hidden;
+}
+
+.sidebar.closed .logo-placeholder {
+  transition: opacity var(--transition);
+  white-space: nowrap;
+  overflow: hidden;
+  height: 0px;
+  width: 0px;
+  transition: 0.6s ease;
 }
 
 .logo-placeholder h2 {
